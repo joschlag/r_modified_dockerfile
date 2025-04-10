@@ -1,7 +1,10 @@
 FROM rocker/r-ver:4.4.3
 
+RUN apt-get update && \
+    apt-get install -y zlib1g-dev && \
+    apt-get clean
+
 RUN mkdir /home/r-environment
-RUN apt-get install zlib1g-dev
 RUN R -e "install.packages(c('dplyr', 'gapminder', 'remotes'))"
 RUN R -e "remotes::install_github('ropensci/bold')"
 RUN R -e "install.packages('taxize')"
