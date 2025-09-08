@@ -7,6 +7,7 @@ RUN apt-get update && \
 RUN mkdir /home/r-environment
 RUN R -e "install.packages(c('dplyr', 'gapminder', 'remotes'))"
 RUN R -e "remotes::install_github('ropensci/bold')"
+RUN R -e "remotes::install_github('tobiasgf/lulu')"
 RUN R -e "install.packages('taxize')"
 RUN R -e "install.packages('BiocManager')"
 RUN R -e "BiocManager::install('XVector')"
