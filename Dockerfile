@@ -16,8 +16,11 @@ RUN apt-get update && \
         libudunits2-dev \
         libgdal-dev \
         libgeos-dev \
-        libproj-dev && \
+        libproj-dev \
+        libglpk40 \
+        libglpk-dev && \
     apt-get clean
+
 
 RUN mkdir /home/r-environment
 
