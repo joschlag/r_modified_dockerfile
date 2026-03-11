@@ -36,5 +36,4 @@ RUN R -e "install.packages('BiocManager')"
 RUN R -e "BiocManager::install(c('XVector','Biostrings'))"
 RUN R -e "BiocManager::install('phyloseq')"
 
-
 CMD R.Version()
