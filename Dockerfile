@@ -25,7 +25,7 @@ RUN apt-get update && \
 RUN mkdir /home/r-environment
 
 # CRAN packages
-RUN R -e "install.packages(c('dplyr', 'gapminder', 'remotes'))"
+RUN R -e "install.packages(c('tidyverse', 'gapminder', 'remotes'))"
 
 # GitHub
 RUN R -e "remotes::install_github('ropensci/bold')"
